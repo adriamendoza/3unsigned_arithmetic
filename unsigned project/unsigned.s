@@ -50,4 +50,51 @@ main:
         ldr r3, [r6]
         bl printf
 
+        ldr r0, =inp1
+        ldr r1, =inp2
+        ldr r2, =inp3
+        ldr r4, [r0]
+        ldr r5, [r1]
+        ldr r6, [r2]
+
+        adds r7, r4, r5
+        mov r8, r7
+        adds r9, r8, r6
+
+        ldr r0, =add_3
+        mov r1, r4
+        mov r2, r5
+        mov r3, r6
+        bl printf
+
+        ldr r0, =sum_result
+        mov r1, r9
+        bl printf
+
+        subs r7, r4, r5
+        mov r8, r7
+        subs r9, r8, r6
+
+        ldr r0, =dif_3
+        mov r1, r4
+        mov r2, r5
+        mov r3, r6
+        bl printf
+
+        ldr r0, =dif_result
+        mov r1, r9
+        bl printf
+
+        muls r7, r4, r5
+        mov r8, r7
+        muls r9, r8, r6
+
+        ldr r0, =prod_3
+        mov r1, r4
+        mov r2, r5
+        mov r3, r6
+        bl printf
+
+        mov r0, #0
+        pop {pc}
 
