@@ -3,7 +3,10 @@
 .align 4
 .section .rodata
 
-prompt:
+prompt:          .asciz "Enter three unsigned integers (separated by a space): "
 scan_str:        .asciz "%u %u %u"
 
-output_str:      .asciz "%u + %u + %u"
+output_str:      .asciz "You entered %u, %u, and %u.\n"
+
+add_3:           .asciz "%u + %u + %u"
+sum_result:      .asciz
