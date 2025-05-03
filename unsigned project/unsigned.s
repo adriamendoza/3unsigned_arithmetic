@@ -95,6 +95,9 @@ main:
         mov r3, r6
         bl printf
 
+        ldr r0, =prod_result
+        mov r1, r9
+        bl printf
+
         mov r0, #0
         pop {pc}
-
